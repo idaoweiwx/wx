@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link rel="stylesheet" href="./iconfont.css">
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=lm0KtwxxpIeKiFoftA4iVZhljciMmhUO"></script>
+  <script src="./static/js/rem.js"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <!--
+      
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <script>
+    if (navigator.appName === 'Microsoft Internet Explorer') { //判断是否是IE浏览器
+      if (navigator.userAgent.match(/Trident/i) && (navigator.userAgent.match(/MSIE 8.0/i) || navigator.userAgent.match(/MSIE 7.0/i) || navigator.userAgent.match(/MSIE 6.0/i))) { //判断浏览器内核是否为Trident内核IE8.0
+        document.write("您的ie浏览器版本过低，请使用IE9以及更高版本，或者换用其他浏览器，谢谢");
+      }
+    }
+    var CommonResource = { "IsDebug": true, "GlobalRootPath": "http://111.198.29.228:18080", "GlobalAuthId": -17, "GlobalAuthParentId": 0, "GlobalMenuId": -17, "GlobalLoginUserCompany": "北京位智天下i到位内网测试公司", "GlobalLoginUserCompanyId": "200931", "GlobalLoginUserAddress": "", "GlobalLoginUserName": "翟科", "GlobalLoginUserAccount": "zk", "GlobalLoginUserId": 12659, "GlobalLoginUserType": 1, "GlobalIsFirstLogin": 0, "GlobalLoginUserClientId": 207047, "IsSubmit": false, "LocationTypeName": ["轨迹上传", "位置共享", "上门拜访签入", "上班打卡", "下班打卡", "提交订单", "上门拜访签出", "位信共享", "自定表单提单", "即时定位", "发公告", "任务进度汇报", "任务互动", "下任务", "发朋友圈", "建计划", "计划总结", "计划互动", "建客户", "建联系人", "改客户状态", "改客户等级", "提客户备忘", "分配客户", "设客户所有者", "建拜访计划", "提电话拜访", "提拜访现场", "提拜访总结", "拜访互动", "提申请", "审批", "商品入库", "设新品", "设促销", "建商品", "录入款", "确认到货", "提单目标分解", "配货", "发货", "送货", "定提单目标", "审核订单", "提反馈", "反馈互动", "处理表单", "日报总结", "日报互动", "加文档", "分享文档", "沟通", "公海划客户", "改客户位置", "创建线索", "线索跟进", "线索互动", "创建商机", "商机跟进", "商机互动", "创建合同", "合同跟进", "建回款计划", "录入到款", "合同互动", "上报", "建对手", "改对手", "上报互动", "建项目", "项目跟进", "设项目进度", "项目互动", "加项目文档", "修改项目", "改项目状态", "转移项目", "换送货人", "送货签收", "建客户开发", "改开发阶段", "", "", "", "填客户调查", "建过程控制", "建售后服务", "", "", "", "", "", "", "", "", "", "", "记费用", "创建名片", "约访拜访签入", "约访拜访签出", "提出库单", "", "提退货单", "录入物流", "退货处理", "提开票需求", "录农牧信息", "农牧互动"], "GlobalHeadPhotoPath": "http://111.198.29.228:10080/attach/hr/user_photo/", "GlobalCurrentBookId": 190, "InPicCarousel": false, "Version": "8.9", "OS": 2 };
+    CommonResource.getBasePath = function (nextLevel, project) {
+      var curWwwPath = window.document.location.href;
+      var pathName = window.document.location.pathname;
+      var pos = curWwwPath.indexOf(pathName);
+      var localhostPath = curWwwPath.substring(0, pos);
+      var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+      var basePath = "";
+
+      if (typeof (project) != 'undefined') {
+        projectName = '/' + project;
+      }
+
+      if (!CommonResource.IsDebug) {
+        var domainArray = localhostPath.substring(localhostPath.indexOf("://") + 3, localhostPath.length).split(".");
+        var domain = domainArray[domainArray.length - 2] + "." + domainArray[domainArray.length - 1];
+        var protocol = window.document.location.protocol;
+
+        basePath = protocol + "//" + nextLevel + "." + domain + projectName;
+
+      } else {
+        basePath = localhostPath + projectName;
+      }
+
+      return basePath;
+    };
+  </script>
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>

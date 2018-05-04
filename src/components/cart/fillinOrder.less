@@ -1,0 +1,117 @@
+.fillinorder{
+    height:100%;
+    background: rgb(247, 247, 247);
+    .addressWrap{
+        padding:0.24rem 0;
+        background: url("./addressWrap.png") repeat-x left bottom;
+        background-color: #fff;
+        background-size: 0.56rem 0.06rem;
+        .environment{
+            width: 0.21rem;
+            height:0.27rem;
+        }
+        .perinfo{
+            font-size:0.3rem;
+            color:#333333;
+        }
+        .address{
+            font-size:0.28rem;
+            color:#999999;
+        }
+    }
+    .shopWrap{
+        background: #fff;
+        border-top:1px solid #dbdbdb;
+        border-bottom:1px solid #dbdbdb;
+        .cartItem{
+            padding-top:0.3rem;
+            .count{
+                float: right;
+            }
+        }
+    }
+    .item{
+        height:0.88rem;
+        margin-left: 0.3rem;
+        line-height: 0.88rem;
+        border-bottom:1px solid #dbdbdb;
+        font-size:15px;
+        color:#303030;
+        background: #fff;
+        padding-right:0.3rem;
+    }
+    .item:last-child{
+        border:0;
+    }
+}
+
+
+.addAddress{
+    background:#ffffff;
+    border-top:1px solid #dbdbdb;
+    border-bottom:1px solid #dbdbdb;
+    height:0.88rem;
+    text-align: center;
+    font-family:PingFangSC-Regular;
+    font-size:0.32rem;
+    color:#1c98cc;
+    letter-spacing:0;
+    line-height: 0.88rem;
+}
+
+//地址列表
+.pageaddressList{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgb(247, 247, 247);
+    .addressList{
+        background: #fff;
+        margin-bottom:0.22rem;
+        border-bottom:1px solid #dbdbdb;
+        
+        .addressItem{
+            padding:0.23rem 0.3rem;
+            padding-left:0;
+            font-family:PingFangSC-Regular;
+            font-size:0.28rem;
+            margin-left:0.3rem;
+            color:#333333;
+            border-bottom:1px solid #dbdbdb;
+            .address{
+                color:#999999;
+                margin-top:0.13rem;
+            }
+            .btns{
+                font-size: 0.28rem;
+            }
+        }
+        .addressItem:last-child{
+            border-bottom:0;
+        }
+    }   
+}
+
+.addAddressPage{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgb(247, 247, 247);
+    .saveBtn{
+        margin:0.2rem 0.12rem;
+        button{
+            width: 100%;
+            height: 44px;
+            font-size: 15px;
+        }
+    }
+    .ant-cascader-input.ant-input{
+        border:0;
+    }
+}

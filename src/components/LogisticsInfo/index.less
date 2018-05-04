@@ -1,0 +1,104 @@
+.trackPage{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    .title{
+        line-height:44px;
+        height:44px;
+        border-bottom:1px solid #ececec;
+        padding-left:0.3rem;
+        font-size: 15px;
+    }
+    .trackInfo{
+        line-height: 44px;
+        height:44px;
+        background: #ececec;
+        padding-left:0.3rem;
+        font-size: 15px;
+    }
+    .map_wrap{
+        position: absolute;
+        left:0;
+        right:0;
+        top:88px;
+        bottom:0;
+        width: 100%;
+        overflow: auto;
+        .map_canvas{
+            width: 100%;
+            height:100%;
+        }
+        .swiper{
+            z-index: 100;
+            position: absolute;
+            bottom:10px;
+            height:60px;
+            width: 100%;
+            overflow-x: scroll;
+           
+            .item{
+                float:left;
+                padding:0 0.2rem;
+                font-size:14px;
+                position:relative;
+                line-height:20px;
+                height:60px;
+                overflow:hidden;
+                background: transparent;
+            }
+            .item::after {
+                content:"...";
+                font-weight:bold;
+                position:absolute;
+                bottom:0;
+                right:0;
+                padding:0 20px 1px 45px;
+                background:url(http://newimg88.b0.upaiyun.com/newimg88/2014/09/ellipsis_bg.png) repeat-y;
+            }
+            
+        }
+    }
+    .expressWrap{
+        position: absolute;
+        left:30px;
+        right:30px;
+        top:60px;
+        bottom:0;
+    }
+    .space-carousel{
+        padding:0 16px;
+        background: transparent;
+    }
+    .slider-slide .locationinfo{
+        overflow:hidden;
+        height:45px;
+        line-height: 22px;
+    }
+    .slider-slide .locationinfo::after {
+        content:"...";
+        font-weight:bold;
+        position:absolute;
+        bottom:0;
+        right:0;
+        padding:0 20px 1px 45px;
+        background:url(http://newimg88.b0.upaiyun.com/newimg88/2014/09/ellipsis_bg.png) repeat-y;
+    }
+    
+}
+
+.am-modal-popup .am-list-item .am-list-line .am-list-content{
+    text-align: center;
+}
+
+
+.none-info{
+    padding-top:50px;
+    font-size: 0.6rem;
+    text-align: center;
+    color:#999;
+    font-weight: bold;
+}

@@ -1,0 +1,63 @@
+.orderListPage{
+    .page-content{
+        padding:0;
+    }
+    .orderListPage{
+        position: fixed;
+        left:0;
+        right:0;
+        top:0;
+        bottom: 0;
+        text-align:center;
+        padding-top:40%;
+        z-index: 30;
+        background: rgba(0,0,0,0.1);
+    }
+    .nav{
+        height:0.8rem;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        background: #fff;
+        padding-bottom: 0.04rem;
+        border-bottom:1px solid #dbdbdb;
+        li{
+
+            -webkit-box-flex: 1 ;
+            -moz-box-flex: 1;
+            -ms-flex: 1 ;
+            -webkit-flex: 1;
+            height:0.8rem;
+            color:#666874;
+            float: left;
+            line-height:0.8rem;
+            text-align: center;
+            font-size:0.28rem;
+            color:#666666;
+            .text_wrap{
+                overflow: hidden;
+                height: 0.78rem;
+                border-bottom:0.04rem solid #fff;
+                display: inline-block;
+            }
+        }
+        li.active{
+            color:#1399d1;
+            .text_wrap{
+                border-bottom:0.04rem solid #1399d1;
+            }
+        }
+    }
+    .orderListWrap{
+        position: absolute;
+        top:0.8rem;
+        bottom:0;
+        overflow-y: auto;
+        width: 100%;
+    }
+}
+
+
+
